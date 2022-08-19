@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* importando uma família de fontes da Web */
+@font-face{ /* utilizando fontes baixadas */
+    font-family:'Android';
+    src: url('../projeto_zipado/fontes/idroid.otf') format('opentype'); /* otf ~~> opentypeformat ttf~~> truetypeformat */
+    font-weight: normal; /* peso da fonte: normal; */
+} 
+
+/* VARIÁVEIS EM CSS3:  */  
+
+:root{ /* pseudo-classe raiz */
+    --cor0:#ebe5c5; /* declaração das variáveis e seus respectivos valores */
+    --cor1:#83e1ad; /* sempre iniciando com o seguinte prefixo: " -- " */
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao:Arial,Verdana, Helvetica,sans-serif; /* variável que armazenará a fonte padrão do site */
+    --fonte-destaque:'Bebas Neue', cursive;
+    --fonte-android:'Android',cursive;
+}  
+
+*{
+    margin:0px;
+    padding:0px;
+} 
+
+a.external::after{
+    content:'\1F517';
+} 
+
+main p{ /* o "p" pode estar dentro do "main" em qualquer nível. */
+    margin:15px 0px;
+    text-align:justify;
+    text-indent:30px;
+    line-height:1.2em;
+    font-size: 1em;
+}  
+
+main strong{
+    color:var(--cor4); 
+    font-weight:bold;
+} 
+
+main a{
+    text-decoration:none;
+    font-weight:bold;
+    background-color:var(--cor1);
+    padding:2px 6px;
+}  
+
+main a:hover{
+    text-decoration:underline;
+    color:var(--cor4);
+}  
+
+body{
+    background-color: var(--cor0);
+    font-family: var(fonte-padrao);
+} 
+
+header{
+    background-image:linear-gradient(to bottom, var(--cor2),var(--cor4));
+    min-height:150px; 
+    text-align: center;
+    padding-top: 40px;
+
+}   
+
+header > h1{ /* o elemento "h1" que está dentro do elemento "header" */
+    color:white; 
+    font-family: var(--fonte-destaque);
+    margin-bottom:20px;
+    font-size: 3em; 
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.267); /* direita; à baixo; espalhamento; cor. */
+} 
+
+header > p{ 
+    font-family: var(--fonte-padrao);
+    color:white; 
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-left:10px;
+    padding-right:10px; 
+    margin:auto; 
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.315);
+    padding-bottom:30px; 
+}    
+
+nav{
+    background-color: var(--cor5);
+    padding:10px;
+    box-shadow:0px 7px 7px rgba(0,0,0,0.363);
+}  
+
+nav > a{
+    color:var(--cor1); 
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold; /* negrito */
+    border-radius:3px;
+    font-family: sans-serif; 
+    transition-duration: 0.5s; /* a duração da animaçção durará 0.5 segundos */
+}   
+
+nav > a:hover{
+    background-color:var(--cor2);
+    color:var(--cor5); 
+}  
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px; /* margem superior: 0; margem à direita: -20px; margem à baixo: 30px; margem à esquerda: -20px */ 
+    padding:20px;
+    padding-bottom: 59%;
+    position: relative;
+} 
+
+.video > iframe{
+    position: absolute;
+    top:5%; /* distância entre a parte superior do iframe até a parte superior da div */
+    left:5%; /* distância entre a esquerda do iframe até a parte esquerda da div */
+    width: 90%;
+    height: 90%;
+}       
+
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin:auto;
+    background-color: white; 
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.418); /* sombreamento */
+    border-radius: 0px 0px 10px 10px;
+    /*
+
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+
+    */
+} 
+
+main h1{ 
+    color:var(--cor5);
+    font-family:var(--fonte-android);
+    font-weight: normal;
+    font-size:1.8em; /* dimensão da fonte (altura e largura) */
+}  
+
+main h2{
+    font-family: var(--fonte-android);
+    color:var(--cor4);
+    font-size:1.3em;
+    font-weight: normal; /* "peso" da fonte */
+    background-image: linear-gradient(to right, var(--cor1),transparent);
+    text-indent:8px;
+}   
+
+main img{
+    width:100%;
+}  
+
+main img.pequena{
+    max-width:350px; /* largura máxima da imagem. */
+    display: block; /* uma imagem NÃO É um BLOCO, por padrão; portanto, é necessário declarar isso. */
+    margin: auto; /* ajuste automático das margens da imagem. */
+} 
+
+aside{
+    background-color:var(--cor1);
+    padding:10px;
+    border-radius:10px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.281);
+} 
+
+aside > h3{
+    background-color: var(--cor4);
+    color:white;
+    padding:10px;
+    margin:-10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;  
+} 
+
+aside > ul{
+    list-style-type:'\2714\00A0\00A0';
+    list-style-position: inside; /* posiciona os itens da lista dentro do container. */
+    columns: 2; /* divide a lista em duas colunas. */
+} 
+
+footer{
+    background-color: var(--cor5);
+    font-family: var(--fonte-padrao);
+    color:white; 
+    text-align: center;
+    font-size: 0.8em;
+    padding:5px; 
+}  
+
+footer a{ 
+    color:white;
+    font-weight:bolder;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+    color:var(--cor1);
+} 
